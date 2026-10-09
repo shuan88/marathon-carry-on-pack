@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071521" />
+  <meta name="description" content="新加坡、曼谷與芭達雅全馬行程的26L登機行李打包清單。" />
+  <title>26L 全馬登機行李清單</title>
+  <style>
+    :root {
+      --ink:#eaf6f4; --muted:#91aaa9; --bg:#071521; --panel:#0c2130;
+      --panel-2:#102b3b; --line:#234454; --teal:#55e2c2; --orange:#ffad58;
+      --red:#ff7b73; --paper:#f5f7f2; --shadow:0 20px 70px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(155deg,#06121d 0%,#0a1d2a 48%,#071521 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;font-size:16px;line-height:1.6}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    .shell{max-width:1180px;margin:auto;padding:24px 20px 72px}
+    .mast{display:grid;grid-template-columns:1.4fr .8fr;gap:22px;align-items:stretch;margin-bottom:22px}
+    .hero,.ticket,.panel{border:1px solid var(--line);background:rgba(12,33,48,.88);box-shadow:var(--shadow)}
+    .hero{border-radius:26px;padding:32px;position:relative;overflow:hidden}
+    .hero:after{content:"26";position:absolute;right:-8px;bottom:-54px;font-size:13rem;font-weight:900;line-height:1;color:rgba(85,226,194,.055)}
+    .eyebrow{margin:0 0 12px;color:var(--teal);font-size:.82rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+    h1{font-size:clamp(2.2rem,6vw,4.8rem);line-height:.98;letter-spacing:-.05em;margin:0;max-width:760px}
+    .lead{font-size:1.08rem;color:#bdd0ce;max-width:680px;margin:20px 0 0}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+    .chip{border:1px solid #2d5564;border-radius:999px;padding:7px 12px;color:#d8e7e5;background:#0b2533;font-size:.9rem}
+    .ticket{border-radius:26px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(150deg,#153648,#0b2130)}
+    .ticket-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+    .route{font-size:1.75rem;font-weight:850;letter-spacing:-.04em}
+    .route span{color:var(--orange)}
+    .date{font-weight:700;color:#b9ceca;text-align:right}
+    .allowance{border-top:1px dashed #3d6370;margin-top:30px;padding-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .metric small{display:block;color:var(--muted);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+    .metric strong{font-size:1.35rem;color:#fff}
+    .notice{margin:0 0 22px;border:1px solid rgba(85,226,194,.35);border-radius:18px;padding:16px 18px;background:rgba(85,226,194,.08);color:#d7f5ed}
+    .dashboard{display:grid;grid-template-columns:1.04fr .96fr;gap:22px;margin-bottom:22px}
+    .panel{border-radius:24px;padding:24px}
+    .panel h2{font-size:1.35rem;letter-spacing:-.025em;margin:0 0 4px}
+    .sub{color:var(--muted);margin:0 0 20px;font-size:.94rem}
+    .gauge-row{display:grid;grid-template-columns:140px 1fr;gap:22px;align-items:center}
+    .gauge{width:140px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--teal) 0deg,var(--teal) 0deg,#203b48 0deg);position:relative}
+    .gauge:after{content:"";position:absolute;inset:12px;border-radius:50%;background:var(--panel)}
+    .gauge-copy{position:relative;z-index:1;text-align:center}
+    .gauge-copy strong{display:block;font-size:1.8rem;line-height:1.1}
+    .gauge-copy small{color:var(--muted)}
+    .statline{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1d3b49;color:#bdcfcd}
+    .statline strong{color:#fff}
+    .progress{height:9px;border-radius:99px;background:#1e3b49;overflow:hidden;margin-top:15px}
+    .progress span{height:100%;display:block;width:0;background:linear-gradient(90deg,var(--teal),#62b9ff);transition:width .25s ease}
+    .dim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    label{display:block;color:#aac0bd;font-size:.86rem;font-weight:700}
+    input[type=number]{width:100%;margin-top:5px;border:1px solid #315767;border-radius:12px;background:#071b28;color:#fff;padding:11px 10px;outline:none}
+    input[type=number]:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(85,226,194,.12)}
+    .primary,.ghost{border-radius:12px;padding:11px 14px;font-weight:800}
+    .primary{width:100%;margin-top:12px;border:0;background:var(--teal);color:#062118}
+    .ghost{border:1px solid #315767;background:transparent;color:#c8d9d7}
+    .result{margin-top:12px;padding:12px 14px;border-radius:12px;background:#071b28;color:#c9dcda;min-height:50px}
+    .result.good{border-left:4px solid var(--teal)} .result.bad{border-left:4px solid var(--red)}
+    .content{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:22px;align-items:start}
+    .checklist{border:1px solid var(--line);border-radius:24px;background:rgba(12,33,48,.9);overflow:hidden;box-shadow:var(--shadow)}
+    .check-head{padding:24px;display:flex;justify-content:space-between;gap:20px;align-items:center;border-bottom:1px solid var(--line)}
+    .check-head h2{margin:0;font-size:1.45rem}.check-head p{margin:3px 0 0;color:var(--muted)}
+    details{border-bottom:1px solid var(--line)} details:last-child{border-bottom:0}
+    summary{list-style:none;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;font-weight:850;cursor:pointer}
+    summary::-webkit-details-marker{display:none}
+    summary span:last-child{color:var(--muted);font-size:.9rem;font-weight:600}
+    summary:after{content:"＋";color:var(--teal);font-size:1.2rem;margin-left:12px} details[open] summary:after{content:"−"}
+    .items{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-top:1px solid var(--line)}
+    .item{background:#0a1e2c;padding:14px 18px;display:grid;grid-template-columns:26px 1fr auto;gap:10px;align-items:start;min-height:68px}
+    .item input{width:19px;height:19px;margin-top:3px;accent-color:var(--teal)}
+    .item label{font-size:.98rem;color:#e0edeb;line-height:1.35;cursor:pointer}
+    .item label small{display:block;color:var(--muted);font-weight:500;margin-top:3px;font-size:.79rem}
+    .weight{color:#789593;font-size:.78rem;white-space:nowrap}
+    .sidebar{display:grid;gap:18px;position:sticky;top:18px}
+    .side-card{border:1px solid var(--line);border-radius:20px;background:rgba(12,33,48,.92);padding:20px}
+    .side-card h3{margin:0 0 14px;font-size:1.05rem}
+    .pack-zone{display:grid;gap:10px}
+    .zone{padding:13px;border-radius:14px;border:1px solid #284b5a;background:#0a1d2b}
+    .zone strong{display:block;color:var(--orange);margin-bottom:2px}.zone span{font-size:.88rem;color:#b6cac7}
+    .timeline{border-left:2px solid #315564;margin-left:8px;padding-left:18px;display:grid;gap:14px}
+    .step{position:relative}.step:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--teal);left:-24px;top:7px;box-shadow:0 0 0 4px #133340}
+    .step strong{display:block}.step span{color:var(--muted);font-size:.86rem}
+    .warning{border-color:rgba(255,173,88,.38);background:rgba(255,173,88,.07)}
+    .warning h3{color:var(--orange)}
+    .warning ul{padding-left:20px;margin:0;color:#cad9d7}
+    footer{text-align:center;color:#789493;margin-top:34px;font-size:.85rem}
+    @media(max-width:860px){.mast,.dashboard,.content{grid-template-columns:1fr}.sidebar{position:static}.hero{padding:26px}.ticket{min-height:240px}.items{grid-template-columns:1fr}.check-head{align-items:flex-start;flex-direction:column}.gauge-row{grid-template-columns:118px 1fr}.gauge{width:118px}}
+    @media(max-width:520px){.shell{padding:12px 12px 52px}.hero,.ticket,.panel{border-radius:19px}.hero{padding:22px}h1{font-size:2.65rem}.allowance{grid-template-columns:1fr}.dim-grid{gap:6px}.gauge-row{grid-template-columns:1fr}.gauge{margin:auto}.check-head,summary{padding:18px}.item{padding:13px 15px}.route{font-size:1.5rem}}
+    @media print{body{background:#fff;color:#111}.shell{max-width:none;padding:0}.hero,.ticket,.panel,.checklist,.side-card{box-shadow:none;background:#fff;color:#111;border-color:#bbb}.hero:after,.dashboard,.ticket,.check-head button,footer{display:none}.mast{display:block}.items{grid-template-columns:1fr 1fr;background:#ccc}.item{background:#fff}.item label,.check-head h2,.side-card h3{color:#111}.item label small,.sub,.check-head p,.zone span,.step span{color:#444}.sidebar{position:static}.content{grid-template-columns:2fr 1fr}.checklist{break-inside:avoid}.zone{background:#fff}.zone strong{color:#111}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="mast" aria-labelledby="page-title">
+      <div class="hero">
+        <p class="eyebrow">Carry-on playbook · 2026</p>
+        <h1 id="page-title">26L 全馬<br>登機行李清單</h1>
+        <p class="lead">一個主背包、一個薄型隨身包、一雙跑鞋。為新加坡、曼谷與芭達雅全馬行程設計，途中洗衣，不使用MH500 38L。</p>
+        <div class="chips"><span class="chip">26L 主背包</span><span class="chip">一雙 EVO SL</span><span class="chip">目標 7–8.5 kg</span><span class="chip">途中洗衣</span></div>
+      </div>
+      <aside class="ticket" aria-label="行程與行李限制">
+        <div class="ticket-top"><div><div class="eyebrow">Trip route</div><div class="route">TPE <span>→</span> SIN <span>→</span> BKK</div></div><div class="date">SEP<br>23–29</div></div>
+        <div class="allowance">
+          <div class="metric"><small>兩件合計</small><strong>≤ 10 kg</strong></div>
+          <div class="metric"><small>主手提行李</small><strong>54 × 38 × 23</strong></div>
+          <div class="metric"><small>個人物品</small><strong>40 × 30 × 10</strong></div>
+          <div class="metric"><small>跑鞋數量</small><strong>1 雙・穿著</strong></div>
+        </div>
+      </aside>
+    </section>
+
+    <p class="notice"><strong>目前方案可行：</strong>一雙跑鞋穿上飛機後，26L足以容納六晚衣物與完整全馬裝備。容量不是登機依據，仍要用下方工具確認背包外部尺寸。</p>
+
+    <section class="dashboard" aria-label="行李狀態">
+      <div class="panel">
+        <h2>打包進度與估重</h2><p class="sub">勾選已放入的物品；估重包含26L背包，但不含穿在身上的衣物與跑鞋。</p>
+        <div class="gauge-row">
+          <div class="gauge" id="gauge"><div class="gauge-copy"><strong id="packed-weight">0.9</strong><small>kg 已裝入</small></div></div>
+          <div>
+            <div class="statline"><span>已完成</span><strong><span id="packed-count">0</span> / <span id="total-count">0</span></strong></div>
+            <div class="statline"><span>10 kg 餘裕</span><strong id="headroom">9.1 kg</strong></div>
+            <div class="statline"><span>建議出發上限</span><strong>8.5 kg</strong></div>
+            <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <h2>26L 背包尺寸檢查</h2><p class="sub">裝好後連同突出袋、背板與扣具一起量。單位：公分。</p>
+        <div class="dim-grid">
+          <label>高度<input id="dim-h" type="number" inputmode="decimal" placeholder="例如 50" min="1" /></label>
+          <label>寬度<input id="dim-w" type="number" inputmode="decimal" placeholder="例如 30" min="1" /></label>
+          <label>厚度<input id="dim-d" type="number" inputmode="decimal" placeholder="例如 20" min="1" /></label>
+        </div>
+        <button class="primary" id="check-size" type="button">檢查能否登機</button>
+        <div class="result" id="size-result" aria-live="polite">酷航上限：54 × 38 × 23 cm，三邊合計不超過115 cm。</div>
+      </div>
+    </section>
+
+    <div class="content">
+      <section class="checklist" aria-labelledby="checklist-title">
+        <div class="check-head"><div><h2 id="checklist-title">打包清單</h2><p>重要賽事物品先完成，最後才補日常用品。</p></div><button class="ghost" id="reset" type="button">清除勾選</button></div>
+
+        <details open>
+          <summary><span>01｜全馬核心裝備</span><span>不能臨時替代</span></summary>
+          <div class="items">
+            <div class="item"><input id="race-shoe" class="pack" type="checkbox" data-weight="0" /><label for="race-shoe">adidas EVO SL Woven<small>唯一跑鞋；穿上飛機，亦作四小時全馬用鞋</small></label><span class="weight">穿著</span></div>
+            <div class="item"><input id="race-kit" class="pack" type="checkbox" data-weight="230" /><label for="race-kit">競賽上衣＋短褲<small>獨立放入防水夾鏈袋</small></label><span class="weight">230g</span></div>
+            <div class="item"><input id="race-socks" class="pack" type="checkbox" data-weight="80" /><label for="race-socks">競賽襪 2 雙<small>主力與乾燥備用各一雙</small></label><span class="weight">80g</span></div>
+            <div class="item"><input id="watch" class="pack" type="checkbox" data-weight="0" /><label for="watch">Amazfit T-Rex 3 Pro<small>出發前同步路線並充滿電</small></label><span class="weight">穿戴</span></div>
+            <div class="item"><input id="hrm" class="pack" type="checkbox" data-weight="70" /><label for="hrm">迪卡儂 HRM 胸帶<small>出發前更換或檢查電池</small></label><span class="weight">70g</span></div>
+            <div class="item"><input id="headlamp" class="pack" type="checkbox" data-weight="95" /><label for="headlamp">NITECORE UT27 Pro<small>03:30起跑；含充電／備用電池</small></label><span class="weight">95g</span></div>
+            <div class="item"><input id="fuel" class="pack" type="checkbox" data-weight="420" /><label for="fuel">果膠＋電解質<small>已測試用量，再加2包備用</small></label><span class="weight">約420g</span></div>
+            <div class="item"><input id="race-small" class="pack" type="checkbox" data-weight="180" /><label for="race-small">帽子、防磨膏、防曬、號碼布扣<small>集中成一個賽事小袋</small></label><span class="weight">約180g</span></div>
+          </div>
+        </details>
+
+        <details open>
+          <summary><span>02｜衣物與洗衣</span><span>穿一套・帶三套</span></summary>
+          <div class="items">
+            <div class="item"><input id="tops" class="pack" type="checkbox" data-weight="300" /><label for="tops">快乾短袖 3 件<small>包含身上穿的1件；包內實放2件</small></label><span class="weight">包內約300g</span></div>
+            <div class="item"><input id="shorts" class="pack" type="checkbox" data-weight="300" /><label for="shorts">日常短褲 2 件<small>其中一件可兼睡褲</small></label><span class="weight">約300g</span></div>
+            <div class="item"><input id="pants" class="pack" type="checkbox" data-weight="0" /><label for="pants">輕薄長褲 1 件<small>穿上飛機，不放背包</small></label><span class="weight">穿著</span></div>
+            <div class="item"><input id="underwear" class="pack" type="checkbox" data-weight="240" /><label for="underwear">內褲 4 件<small>配合9/25洗衣</small></label><span class="weight">約240g</span></div>
+            <div class="item"><input id="socks" class="pack" type="checkbox" data-weight="150" /><label for="socks">日常襪 3 雙<small>與競賽襪分開收納</small></label><span class="weight">約150g</span></div>
+            <div class="item"><input id="jacket" class="pack" type="checkbox" data-weight="0" /><label for="jacket">FORCLAZ Helium 900<small>飛機冷氣與日間防曬；穿著或手拿</small></label><span class="weight">穿著</span></div>
+            <div class="item"><input id="slippers" class="pack" type="checkbox" data-weight="180" /><label for="slippers">輕薄拖鞋 1 雙<small>住宿、洗澡與賽後使用</small></label><span class="weight">約180g</span></div>
+            <div class="item"><input id="laundry" class="pack" type="checkbox" data-weight="120" /><label for="laundry">洗衣袋＋洗衣精片<small>髒衣與濕衣分開</small></label><span class="weight">約120g</span></div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span>03｜盥洗、健康與雨具</span><span>所有液體 ≤100mL</span></summary>
+          <div class="items">
+            <div class="item"><input id="toiletry" class="pack" type="checkbox" data-weight="360" /><label for="toiletry">旅行盥洗包<small>牙刷、牙膏、洗面乳、刮鬍用品</small></label><span class="weight">約360g</span></div>
+            <div class="item"><input id="meds" class="pack" type="checkbox" data-weight="220" /><label for="meds">常用藥與簡易醫療<small>腸胃藥、水泡貼、OK繃、肌貼少量</small></label><span class="weight">約220g</span></div>
+            <div class="item"><input id="sleep" class="pack" type="checkbox" data-weight="70" /><label for="sleep">耳塞＋眼罩<small>新加坡膠囊／青旅睡眠使用</small></label><span class="weight">70g</span></div>
+            <div class="item"><input id="rain" class="pack" type="checkbox" data-weight="180" /><label for="rain">輕量雨具<small>摺疊傘或100–200g雨衣擇一</small></label><span class="weight">約180g</span></div>
+            <div class="item"><input id="liquid-bag" class="pack" type="checkbox" data-weight="20" /><label for="liquid-bag">透明液體袋<small>單瓶不超過100mL</small></label><span class="weight">20g</span></div>
+            <div class="item"><input id="tissues" class="pack" type="checkbox" data-weight="80" /><label for="tissues">衛生紙＋濕紙巾<small>賽前、交通與飲食備用</small></label><span class="weight">80g</span></div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span>04｜電子用品與證件</span><span>放隨身小包</span></summary>
+          <div class="items">
+            <div class="item"><input id="phone" class="pack" type="checkbox" data-weight="0" /><label for="phone">iPhone 17＋AirPods 4 NC<small>手機隨身，耳機取代頭戴式耳機</small></label><span class="weight">隨身</span></div>
+            <div class="item"><input id="powerbank" class="pack" type="checkbox" data-weight="220" /><label for="powerbank">小米 10000mAh行動電源<small>不得托運；飛行中不使用、不充電</small></label><span class="weight">約220g</span></div>
+            <div class="item"><input id="charger" class="pack" type="checkbox" data-weight="260" /><label for="charger">65W充電器＋USB-C線2條<small>加手錶與頭燈所需充電線</small></label><span class="weight">約260g</span></div>
+            <div class="item"><input id="adapter" class="pack" type="checkbox" data-weight="110" /><label for="adapter">萬用轉接頭<small>新加坡與泰國使用</small></label><span class="weight">約110g</span></div>
+            <div class="item"><input id="passport" class="pack" type="checkbox" data-weight="120" /><label for="passport">護照＋信用卡2張＋現金<small>分開存放，不塞入主包深處</small></label><span class="weight">約120g</span></div>
+            <div class="item"><input id="docs" class="pack" type="checkbox" data-weight="40" /><label for="docs">航班、住宿、保險與賽事證明<small>手機離線備份；紙本只留必要頁面</small></label><span class="weight">約40g</span></div>
+            <div class="item"><input id="esim" class="pack" type="checkbox" data-weight="0" /><label for="esim">eSIM與入境資料<small>QR Code、SG Arrival Card、TDAC離線截圖</small></label><span class="weight">數位</span></div>
+            <div class="item"><input id="bottle" class="pack" type="checkbox" data-weight="90" /><label for="bottle">空水瓶／軟水杯<small>通過安檢後再裝水</small></label><span class="weight">90g</span></div>
+          </div>
+        </details>
+      </section>
+
+      <aside class="sidebar">
+        <section class="side-card">
+          <h3>三區分裝</h3>
+          <div class="pack-zone">
+            <div class="zone"><strong>穿在身上</strong><span>EVO SL、長褲、快乾上衣、Helium 900、手錶</span></div>
+            <div class="zone"><strong>26L 主背包</strong><span>衣物、拖鞋、盥洗、雨具；賽事袋放最上層</span></div>
+            <div class="zone"><strong>薄型隨身包</strong><span>護照、手機、行動電源、充電器、藥品與報名證明</span></div>
+          </div>
+        </section>
+        <section class="side-card">
+          <h3>洗衣節奏</h3>
+          <div class="timeline">
+            <div class="step"><strong>9/25・第一次洗衣</strong><span>清洗前三天日常衣物，保留賽事服乾燥。</span></div>
+            <div class="step"><strong>9/27・全馬賽後</strong><span>競賽衣襪冷水沖洗；跑鞋陰乾，不烘乾。</span></div>
+            <div class="step"><strong>9/29・回台</strong><span>髒衣集中防水袋，返台後整批清洗。</span></div>
+          </div>
+        </section>
+        <section class="side-card warning">
+          <h3>不要放進去</h3>
+          <ul><li>MH500 38L</li><li>第二雙跑鞋</li><li>牛仔褲、厚外套</li><li>大罐盥洗用品</li><li>筆電、Steam Deck</li><li>Sony頭戴式耳機</li></ul>
+        </section>
+      </aside>
+    </div>
+    <footer>估重僅供打包規劃。出發前以實際行李秤與裝滿後外部尺寸為準。</footer>
+  </main>
+  <script>
+    (() => {
+      const boxes = [...document.querySelectorAll('.pack')];
+      const $ = (id) => document.getElementById(id);
+      const baseWeight = 900;
+      const load = () => {
+        try { const saved = JSON.parse(localStorage.getItem('carryon-pack') || '{}'); boxes.forEach(b => b.checked = !!saved[b.id]); } catch (_) {}
+      };
+      const render = () => {
+        const packed = boxes.filter(b => b.checked);
+        const grams = baseWeight + packed.reduce((sum,b) => sum + Number(b.dataset.weight || 0), 0);
+        const kg = grams / 1000;
+        const pct = boxes.length ? Math.round(packed.length / boxes.length * 100) : 0;
+        $('packed-weight').textContent = kg.toFixed(1);
+        $('packed-count').textContent = packed.length;
+        $('total-count').textContent = boxes.length;
+        $('headroom').textContent = Math.max(0, 10 - kg).toFixed(1) + ' kg';
+        $('progress-bar').style.width = pct + '%';
+        $('gauge').style.background = `conic-gradient(var(--teal) 0deg, var(--teal) ${pct * 3.6}deg, #203b48 ${pct * 3.6}deg)`;
+        const data = Object.fromEntries(boxes.map(b => [b.id,b.checked]));
+        try { localStorage.setItem('carryon-pack', JSON.stringify(data)); } catch (_) {}
+      };
+      boxes.forEach(b => b.addEventListener('change', render));
+      $('reset').addEventListener('click', () => { boxes.forEach(b => b.checked = false); render(); });
+      $('check-size').addEventListener('click', () => {
+        const h = Number($('dim-h').value), w = Number($('dim-w').value), d = Number($('dim-d').value);
+        const result = $('size-result');
+        if (![h,w,d].every(v => v > 0)) { result.className='result bad'; result.textContent='請先填入完整的高度、寬度與厚度。'; return; }
+        const limits = [54,38,23], values = [h,w,d], sum = h+w+d;
+        const direct = values.every((v,i)=>v<=limits[i]);
+        const linear = sum <= 115;
+        if (direct && linear) { result.className='result good'; result.innerHTML=`符合尺寸：${h} × ${w} × ${d} cm，三邊合計 ${sum} cm。裝滿後再量一次即可。`; }
+        else { const issues=[]; if(h>54)issues.push(`高度超出 ${h-54} cm`); if(w>38)issues.push(`寬度超出 ${w-38} cm`); if(d>23)issues.push(`厚度超出 ${d-23} cm`); if(!linear)issues.push(`三邊合計超出 ${sum-115} cm`); result.className='result bad'; result.textContent='不符合酷航規格：' + issues.join('、') + '。'; }
+      });
+      load(); render();
+    })();
+  </script>
+</body>
+</html>
